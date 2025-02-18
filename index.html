@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josi & Emi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #d6336c;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        #contador {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        .heart {
+            font-size: 3em;
+            color: red;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .spotify-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nosso Amor Crescendo 💖</h1>
+    <p>Desde 01/12/2024, estamos juntos há:</p>
+    <div id="contador"></div>
+    <div class="heart">❤️❤️❤️</div>
+    
+    <div class="image-container">
+        <img src="https://drive.google.com/file/d/1PC07Cve4AKuTJIdRsdHdKbvrNR-hes2O/view?usp=drive_link">
+        <img src="https://drive.google.com/file/d/1QbQYWdqRd3U_LtOLLI2cftwr26FuTq1O/view?usp=drive_link">
+		<img src="https://drive.google.com/file/d/1BeU_7Hyhq86AInsJift1JrfScmFEaUjk/view?usp=drive_link">
+		<img src="https://drive.google.com/file/d/1LIBVoIVb2-5-nh3CREGaPLNIPfsk4wle/view?usp=drive_link">
+		<img src="https://drive.google.com/file/d/1tYlQORcFFIQuso6j4sO_uAcBeVRkownr/view?usp=drive_link">
+		<img src="https://drive.google.com/file/d/1ymo5CrLU-cx367qOPGQO6j9aZuDJaY6J/view?usp=drive_link">
+		<img src="https://drive.google.com/file/d/1aqhG7LYUKpQf8BWLnid9XUYzInfh8CSh/view?usp=drive_link">
+		<img src="https://drive.google.com/file/d/1HBPo5US2y5Kg-6Mh_qHwJoqRXFqrw7te/view?usp=drive_link">
+		<img src="https://drive.google.com/file/d/1lIDQq8jWWQL0FaA2dgti2m7FesoSgbqg/view?usp=drive_link">
+		<img src="https://drive.google.com/file/d/1TFs0DrqlItKwc9HAMrVGbOhnR3lKZ_i7/view?usp=drive_link">
+		<img src="https://drive.google.com/file/d/1f96fend8XoujJLH6u1Zp3IkJph8NpK85/view?usp=drive_link">	
+    </div>
+    
+    <div class="spotify-container">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2gfn28JSINCJGLrUimmu0l?si=b80a753002a04924" width="300" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+    
+    <script>
+        function atualizarContador() {
+            const dataInicial = new Date('2024-12-01T00:00:00');
+            const agora = new Date();
+            const diferenca = agora - dataInicial;
+            
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+            const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
+            const segundos = Math.floor((diferenca / 1000) % 60);
+            
+            document.getElementById('contador').innerHTML = 
+                `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+        }
+        
+        setInterval(atualizarContador, 1000);
+        atualizarContador();
+    </script>
+</body>
+</html>
